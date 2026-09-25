@@ -5,10 +5,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-produtos = {
-    "name": str,
-    "price": str
-}
+
 driver = webdriver.Chrome()
 wait = WebDriverWait(driver, 30)
 
@@ -26,11 +23,14 @@ prices = wait.until(
     EC.presence_of_all_elements_located((By.XPATH, "//div[@class='a-section a-spacing-none _cXVhZ_asin-title_16ABS']/following-sibling::div"))
 )
 
-produtos["name"] = names
-produtos["price"] = prices
 
-for nome, preco in zip(produtos["name"], produtos["price"]):
-    print("\n", nome.text, preco.text.replace("\n", ","))
+produtos = {
+    "name": [i.text for i in names],
+    "price": [i.text.replace("\n", ",") for i in prices]
+}
+
+for name, price in zip(produtos["name"], produtos["price"]):
+    print(name, price)
 
 
 
