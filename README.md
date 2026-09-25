@@ -60,14 +60,14 @@ The browser will open automatically and the script will access Amazon Brazil, lo
 Example output:
 
 ```text
-Mechanical Keyboard
-R$ 120.00
-
-Gaming Mouse
-R$ 80.00
-
-Gaming Monitor
-R$ 900.00
+Echo Dot (Geração… R$459,00
+Amazon Fire TV St… R$349,90
+Kindle 16 GB (Ger… R$799,00
+Smart TV TCL 32… R$1.049,00
+Kit 12 Pares Meias… R$31,99
+Chinelo Havaianas… R$43,99
+Tenis Infantil De A… R$57,99
+Babuche Infantil A… R$69,90
 ```
 
 ## ⚙️ How It Works
